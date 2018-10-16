@@ -49,7 +49,7 @@ https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb
 Since LLDB doesn't work with the msvc compiler, we need to install the Rust GNU toolschain and use that one. This have some drawbacks though such as we won't be able to intop with software produced by Visual Studio. 
 
 ```
-C:> rustup install stable-gnu
+C:> rustup install stable-i686-pc-windows-gnu
 ```
 
 ### 6. Set the active toolchain
@@ -57,7 +57,7 @@ C:> rustup install stable-gnu
 We now need to set the Rust GNU toolchain as the active toolchain. We do this by using the `rustup` command again.
 
 ```
-C:> rustup default stable-gnu
+C:> rustup default stable-i686-pc-windows-gnu
 ```
 
 We should now verify what our toolchain configuration look like by using `rustup show`.
@@ -69,7 +69,8 @@ Default host: x86_64-pc-windows-msvc
 installed toolchains
 --------------------
 
-stable-x86_64-pc-windows-gnu (default)
+stable-i686-pc-windows-gnu (default)
+stable-x86_64-pc-windows-gnu
 stable-x86_64-pc-windows-msvc
 beta-x86_64-pc-windows-msvc
 nightly-2017-12-08-x86_64-pc-windows-msvc
@@ -78,7 +79,7 @@ nightly-x86_64-pc-windows-msvc
 active toolchain
 ----------------
 
-stable-x86_64-pc-windows-gnu (default)
+stable-i686-pc-windows-gnu (default)
 rustc 1.23.0 (766bd11c8 2018-01-01)
 ```
 
